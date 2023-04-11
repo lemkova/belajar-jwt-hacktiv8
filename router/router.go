@@ -20,6 +20,8 @@ func StartApp() *gin.Engine {
 	{
 		productRouter.Use(middleware.Authentication())
 		productRouter.POST("/", controllers.CreateProduct)
+
+		productRouter.PUT("/:productId", middleware.ProductAuthorization(), controllers.UpdateProduct)
 	}
 
 	return r

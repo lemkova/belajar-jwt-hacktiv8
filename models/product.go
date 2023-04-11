@@ -7,8 +7,8 @@ import (
 
 type Product struct {
 	GormModel
-	Title       string `json:"title" form:"title" valid:"required-You must enter a title"`
-	Description string `json:"description" form:"description" valid:"required-You must enter a description"`
+	Title       string `json:"title" form:"title" valid:"required~You must enter a title"`
+	Description string `json:"description" form:"description" valid:"required~You must enter a description"`
 	UserID      uint
 	User        *User
 }
